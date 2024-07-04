@@ -1,0 +1,211 @@
+.home-page {
+  display: flex;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  height: 60%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+  & p {
+    font-size: 0.8rem;
+    text-align: center;
+    color: #7b7b7b;
+  }
+}
+
+.logo {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 0.5rem 5rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: "Source Serif 4";
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.menu a {
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #8d8d8d;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.menu a i {
+  margin-right: 15px;
+}
+
+.menu a:hover {
+  background-color: #ddd;
+}
+.menu a.active {
+  color: #202020;
+  border-left: 4px solid #88c2bb;
+  font-weight: bold;
+}
+
+.logout {
+  margin-top: auto;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.logout i {
+  margin-right: 10px;
+}
+
+.logout:hover {
+  background-color: #ddd;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-bar input {
+  padding: 12px;
+  border-radius: 4px;
+  width: 100%;
+  border: 1px solid #e5e5e5;
+}
+.filter {
+  position: absolute;
+}
+
+.filters-button {
+  margin-left: 10px;
+  padding: 5px;
+  border: none;
+  background-color: #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filters-button i {
+  margin-right: 5px;
+}
+
+.logout {
+  color: #88c2bb;
+}
+
+.main-card {
+  background-color: #fff;
+  padding: 1rem 3rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  & p {
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+
+  & .main-content {
+    margin: 1.2rem 0;
+  }
+}
+
+.become-seller {
+  padding: 10px 20px;
+  border: none;
+  background-color: #88c2bb;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  padding: 2rem;
+  font-size: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.right {
+  width: 20%;
+
+  & p {
+    margin: 35px 5px 5px 5px;
+
+    & span {
+      margin-left: 20px;
+      color: #7b7b7b;
+    }
+  }
+}
+.vertical-card {
+  position: relative;
+  margin-top: 1em;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+}
+
+.artist {
+  position: absolute;
+  left: 20px;
+  width: 20%;
+  bottom: 20px;
+}
+
+.aar,
+.aara {
+  position: absolute;
+  top: 0;
+  color: white;
+}
+
+.aar {
+  left: 30%;
+  top: 30%;
+}
+
+.aara {
+  left: 30%;
+  top: 50%;
+  font-size: 0.8rem;
+}

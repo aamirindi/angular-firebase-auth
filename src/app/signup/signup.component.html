@@ -1,0 +1,82 @@
+<div class="signup-container">
+  <div class="signup-form">
+    <h1>Sign Up</h1>
+    <form (ngSubmit)="onSignup()">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="email"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="password-toggle">
+          <input
+            type="password"
+            id="password"
+            name="password"
+            [(ngModel)]="password"
+            required
+            [type]="showPassword ? 'text' : 'password'"
+          />
+          <span
+            class="password-toggle-icon"
+            (click)="togglePasswordVisibility('password')"
+          >
+            <i
+              class="fa"
+              [ngClass]="{
+                'fa-eye': !showPassword,
+                'fa-eye-slash': showPassword
+              }"
+            ></i>
+          </span>
+        </div>
+        <div
+          *ngIf="password.length > 0 && password.length < 6"
+          class="error-message"
+        >
+          Password must be at least 6 characters long.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <div class="password-toggle">
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            [(ngModel)]="confirmPassword"
+            required
+            [type]="showConfirmPassword ? 'text' : 'password'"
+          />
+          <span
+            class="password-toggle-icon"
+            (click)="togglePasswordVisibility('confirmPassword')"
+          >
+            <i
+              class="fa"
+              [ngClass]="{
+                'fa-eye': !showConfirmPassword,
+                'fa-eye-slash': showConfirmPassword
+              }"
+            ></i>
+          </span>
+        </div>
+        <div
+          *ngIf="confirmPassword !== '' && confirmPassword !== password"
+          class="error-message"
+        >
+          Passwords do not match.
+        </div>
+      </div>
+      <div *ngIf="signupError" class="error-message">{{ signupError }}</div>
+      <button type="submit" class="signup-button">Sign Up</button>
+      <a routerLink="/login" class="login-link">Already a User? Login</a>
+    </form>
+  </div>
+</div>

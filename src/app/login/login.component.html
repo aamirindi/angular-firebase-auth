@@ -1,0 +1,45 @@
+<div class="login-container">
+  <div class="login-form">
+    <h1>Login</h1>
+    <form (ngSubmit)="onLogin()">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="email"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="password-toggle">
+          <input
+            type="password"
+            id="password"
+            name="password"
+            [(ngModel)]="password"
+            required
+            #passwordInput
+          />
+          <span
+            class="password-toggle-icon"
+            (click)="togglePasswordVisibility(passwordInput)"
+          >
+            <i
+              class="fa"
+              [ngClass]="{
+                'fa-eye': !showPassword,
+                'fa-eye-slash': showPassword
+              }"
+            ></i>
+          </span>
+        </div>
+        <div *ngIf="loginError" class="error-message">{{ loginError }}</div>
+      </div>
+      <button type="submit" class="login-button">Login</button>
+      <a routerLink="/signup" class="signup-link">Not a User? Sign Up</a>
+    </form>
+  </div>
+</div>
